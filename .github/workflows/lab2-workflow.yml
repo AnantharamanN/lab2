@@ -9,7 +9,7 @@ on:
       required: false
 
      custom_message:
-      description: Enter a custom message"
+      description: "Enter a custom message"
       type: string
       required: true
 
@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Printing custom message
         run: |
-          echo "Cutom message ${{ inputs.custom_message }}"
+          echo ${{ inputs.custom_message }}
 
       - name: Printing run-job boolean value
         if: ${{ inputs.run_job == 'true' || inputs.run_job }}
